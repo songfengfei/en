@@ -143,10 +143,6 @@ $(document).ready(() => {
     $(window).scroll(update);
 
     $('#back-to-top').on('click', () => {
-        if (CSS && CSS.supports && CSS.supports('(scroll-behavior: smooth)')) {
-            window.scroll({ top: 0, behavior: 'smooth' });
-        } else {
-            $('body, html').animate({ scrollTop: 0 }, 400);
-        }
+        $('body, html').animate({ scrollTop: 0 }, 400);
     });
 });
